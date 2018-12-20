@@ -114,7 +114,8 @@ public class PlayGame {
 			int height=0;
 			int weight=0;
 			int level=1;
-			int hitPoints=5;
+			int hitPoints=10;
+			int experiencePoints=1;
 			System.out.println("Because you are indeed " + name + " the " + job + " your final statistics are...");
 			userInput.nextLine();
 
@@ -122,6 +123,7 @@ public class PlayGame {
 			case "Knight":
 				height= height + 70;
 				weight=weight+210;
+				hitPoints=hitPoints+4;
 				strength = strength + 4;
 				dexterity = dexterity - 1;
 				constitution = constitution + 2;
@@ -131,12 +133,14 @@ public class PlayGame {
 				// difference of +3
 				System.out.println(name + " the " + job + " stats:" + " Strength: " + strength + " Dexterity: "
 						+ dexterity + " Constitution: " + constitution + " Intelligence: " + intelligence + " Wisdom: "
-						+ wisdom + " Charisma: " + charisma + " Height: " + height + " Weight: " + weight + " Level: " + level);
+						+ wisdom + " Charisma: " + charisma + " Height: " + height + " Weight: " + weight + 
+						" Level: " + level  + " Hitpoints: " + hitPoints);
 				System.out.println("Your statistics will give you advantages or disadvantages throughout the game.");
 				break;
 			case "Barbarian":
 				height= height + 78;
 				weight=weight+245;
+				hitPoints=hitPoints+3;
 				strength = strength + 3;
 				dexterity = dexterity + 1;
 				constitution = constitution + 1;
@@ -146,12 +150,14 @@ public class PlayGame {
 				// difference of +2
 				System.out.println(name + " the " + job + " stats:" + " Strength: " + strength + " Dexterity: "
 						+ dexterity + " Constitution: " + constitution + " Intelligence: " + intelligence + " Wisdom: "
-						+ wisdom + " Charisma: " + charisma + " Height: " + height + " Weight: " + weight + " Level: " + level);
+						+ wisdom + " Charisma: " + charisma + " Height: " + height + " Weight: " + weight 
+						+ " Level: " + level  + " Hitpoints: " + hitPoints);
 				System.out.println("Your statistics will give you advantages or disadvantages throughout the game.");
 				break;
 			case "Monk":
 				height= height + 68;
 				weight=weight+185;
+				hitPoints=hitPoints+3;
 				strength = strength + 4;
 				dexterity = dexterity + 3;
 				constitution = constitution + 1;
@@ -161,12 +167,14 @@ public class PlayGame {
 				// difference of +4
 				System.out.println(name + " the " + job + " stats:" + " Strength: " + strength + " Dexterity: "
 						+ dexterity + " Constitution: " + constitution + " Intelligence: " + intelligence + " Wisdom: "
-						+ wisdom + " Charisma: " + charisma + " Height: " + height + " Weight: " + weight + " Level: " + level);
+						+ wisdom + " Charisma: " + charisma + " Height: " + height + " Weight: " + weight + 
+						" Level: " + level  + " Hitpoints: " + hitPoints);
 				System.out.println("Your statistics will give you advantages or disadvantages throughout the game.");
 				break;
 			case "Archer":
 				height= height + 65;
 				weight=weight+160;
+				hitPoints=hitPoints+2;
 				strength = strength - 2;
 				dexterity = dexterity + 3;
 				constitution = constitution - 1;
@@ -176,12 +184,14 @@ public class PlayGame {
 				// difference of +2
 				System.out.println(name + " the " + job + " stats:" + " Strength: " + strength + " Dexterity: "
 						+ dexterity + " Constitution: " + constitution + " Intelligence: " + intelligence + " Wisdom: "
-						+ wisdom + " Charisma: " + charisma + " Height: " + height + " Weight: " + weight + " Level: " + level);
+						+ wisdom + " Charisma: " + charisma + " Height: " + height + " Weight: " + weight + 
+						" Level: " + level + " Hitpoints: " + hitPoints);
 				System.out.println("Your statistics will give you advantages or disadvantages throughout the game.");
 				break;
 			case "Assasin":
 				height= height + 62;
 				weight=weight+255;
+				hitPoints=hitPoints+2;
 				strength = strength + 2;
 				dexterity = dexterity + 4;
 				constitution = constitution - 1;
@@ -191,12 +201,14 @@ public class PlayGame {
 				// difference of +3
 				System.out.println(name + " the " + job + " stats:" + " Strength: " + strength + " Dexterity: "
 						+ dexterity + " Constitution: " + constitution + " Intelligence: " + intelligence + " Wisdom: "
-						+ wisdom + " Charisma: " + charisma + " Height: " + height + " Weight: " + weight + " Level: " + level);
+						+ wisdom + " Charisma: " + charisma + " Height: " + height + " Weight: " + weight +
+						" Level: " + level + " Hitpoints: " + hitPoints);
 				System.out.println("Your statistics will give you advantages or disadvantages throughout the game.");
 				break;
 			case "Wizard":
 				height= height + 85;
 				weight=weight+220;
+				hitPoints=hitPoints+1;
 				strength = strength - 3;
 				dexterity = dexterity - 2;
 				constitution = constitution + 2;
@@ -206,7 +218,8 @@ public class PlayGame {
 				// difference of +3
 				System.out.println(name + " the " + job + " stats:" + " Strength: " + strength + " Dexterity: "
 						+ dexterity + " Constitution: " + constitution + " Intelligence: " + intelligence + " Wisdom: "
-						+ wisdom + " Charisma: " + charisma + " Height: " + height + " Weight: " + weight + " Level: " + level);
+						+ wisdom + " Charisma: " + charisma + " Height: " + height + " Weight: " + weight 
+						+ " Level: " + level + " Hitpoints: " + hitPoints);
 				System.out.println("Your statistics will give you advantages or disadvantages throughout the game.");
 				break;
 			default:
@@ -214,7 +227,7 @@ public class PlayGame {
 				System.out.println("Error...must only capitalize first letter and spell correctly");
 
 			}
-			hero=new Character(name, job, strength, dexterity, dexterity, constitution, intelligence, wisdom, charisma, height, weight, level,)
+			hero=new Character(name, level, height, weight, strength, dexterity, constitution, intelligence, wisdom, charisma, job, hitPoints, experiencePoints);
 		}
 	}
 

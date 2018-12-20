@@ -11,13 +11,12 @@ public class Character
 		private int intelligence;
 		private int wisdom;
 		private int charisma;
-		private String race;
 		private String job;
 		private int hitPoints;
 		private int experiencePoints;
 		
 		public Character (String name, int level, int height, int weight, int strength, int dexterity, 
-				int constitution, int intelligence, int wisdom, int charisma, String race, String job,
+				int constitution, int intelligence, int wisdom, int charisma, String job,
 				int hitPoints, int experiencePoints )
 		{	
 			this.name=name;
@@ -30,7 +29,6 @@ public class Character
 			this.intelligence=intelligence;
 			this.wisdom=wisdom;
 			this.charisma=charisma;
-			this.race=race;
 			this.job=job;
 			this.hitPoints=hitPoints;
 			this.experiencePoints=experiencePoints;
@@ -134,16 +132,6 @@ public class Character
 		public void setCharisma(int charisma)
 			{
 				this.charisma = charisma;
-			}
-
-		public String getRace()
-			{
-				return race;
-			}
-
-		public void setRace(String race)
-			{
-				this.race = race;
 			}
 
 		public String getJob()
